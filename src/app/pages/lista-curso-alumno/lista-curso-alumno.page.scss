@@ -1,0 +1,67 @@
+ion-card {
+    margin: 16px;
+    padding: 16px;
+    background-color: #f9f9f9; // Color de fondo ligero
+    border-radius: 8px; // Bordes redondeados
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Sombra para profundidad
+  
+    .search-bar {
+      margin-bottom: 16px; // Espacio inferior para separar del contenido
+    }
+  
+    .table {
+      width: 100%; // Ancho completo
+      border-collapse: collapse; // Colapsar bordes
+  
+      .row {
+        display: flex; // Usar flexbox para filas
+        border-bottom: 1px solid #ccc; // Línea separadora
+  
+        &.header {
+          font-weight: bold;
+          background-color: #e0e0e0; // Color de fondo para el encabezado
+        }
+      }
+  
+      .cell {
+        flex: 1; // Ocupa el espacio disponible
+        padding: 12px; // Espaciado dentro de las celdas
+        text-align: left; // Alinear texto a la izquierda
+  
+        h3 {
+          margin: 0; // Eliminar margen por defecto
+          font-size: 16px; // Tamaño de fuente
+          color: #333; // Color de texto
+        }
+  
+        p {
+          margin: 4px 0; // Espaciado entre párrafos
+          color: #555; // Color de texto secundario
+        }
+      }
+    }
+  
+    // Ajustes para los items de alumnos y secciones
+    ion-item {
+      margin: 0; // Sin margen adicional
+    }
+  }
+  .titulo{
+    text-align: center;
+  }
+  // Clases adicionales de Bootstrap para mejorar la apariencia
+  .table {
+    th {
+      background-color: #f8f9fa; // Color de fondo para encabezados de tabla
+      color: #495057; // Color de texto
+    }
+  
+    td {
+      border-top: 1px solid #dee2e6; // Borde superior para las celdas
+    }
+  
+    .row:hover {
+      background-color: #f1f1f1; // Color de fondo al pasar el mouse
+    }
+  }
+  

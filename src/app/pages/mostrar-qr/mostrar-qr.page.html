@@ -1,0 +1,16 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="success">
+    <ion-title class="titulo">MostrarQR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="qr"[fullscreen]="true">
+  <ion-header  collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">MostrarQR</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <qr-code [value]="datosAsignaturaJSON" size="300" errorCorrectionLevel="M"></qr-code>   <!-- // Generar el arreglo en formato JSON
+  public datosAsignaturaJSON: string = JSON.stringify(this.datosAsignaturaDocente); -->
+</ion-content>
+

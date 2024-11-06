@@ -1,0 +1,65 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="success">
+    <ion-title class="titulo"></ion-title>
+
+    <ion-button color="success" slot="end" [routerLink]="['/listado-profe']">
+      <ion-icon name="log-in-sharp" size="large"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding" style="background-color: #FFFFFF;">
+  <div *ngIf="claseActualDocente.length > 0; else noData" class="clase-container">
+
+    <div *ngFor="let j of claseActualDocente" class="clase-card">
+      <h1 class="titulo-card">Clase en Progreso</h1>
+      <div class="clase-header">
+        <h2>{{ j.asignaturaId }}</h2>
+        <span class="asignatura">{{ j.seccionId }}</span>
+      </div>
+      <div class="clase-body">
+        <p><strong>Día:</strong> {{ j.dia }}</p>
+        <div class="horario">
+          <p><strong>Inicio:</strong> {{ j.horaInicio }}</p>
+          <p><strong>Fin:</strong> {{ j.horaFin }}</p>
+        </div>
+      </div>
+    </div>
+    <ion-card class="ion-text-center">
+      <ion-card-content>
+        <ion-button expand="block" style="--background: #1A1A1A; --color: white;" 
+        routerLink="/mostrar-qr">
+          <h1>
+            Generar QR
+          </h1>
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <!-- Card para cuando no hay clases -->
+  <ng-template #noData>
+    <div class="no-clase-card">
+      <h1 class="titulo-card">Clase en Progreso</h1>
+      <div class="no-clase-content">
+        <h2>No hay clases en progreso</h2>
+        <p>Por favor, vuelve más tarde para ver las próximas clases.</p>
+      </div>
+    </div>
+    <ion-card class="ion-text-center">
+      <ion-card-content>
+        <ion-button [disabled]="true" expand="block" style="--background: #1A1A1A; --color: white;" 
+          routerLink="/mostrar-qr">
+          <h1>
+            Generar QR
+          </h1>
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </ng-template>
+  
+</ion-content>
+
+
+
+
+

@@ -1,0 +1,52 @@
+ion-header {
+  background-color: #5c6bc0; // Color terciario
+  --ion-toolbar-background: #5c6bc0; // Color del fondo del toolbar
+  --ion-toolbar-color: #ffffff; // Color del texto del toolbar
+
+  .titulo {
+    font-size: 1.5em; // Tamaño de fuente más grande para el título
+    font-weight: bold;
+    text-align: center; // Centrar el título
+  }
+}
+
+ion-content {
+  background-color: #f3f4f6; // Color de fondo claro
+  padding: 20px;
+
+  ion-card {
+    background-color: #ffffff; // Color de fondo de la tarjeta
+    border-radius: 10px; // Bordes redondeados
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Sombra suave
+    padding: 15px; // Espaciado dentro de la tarjeta
+    display: flex; // Usar flexbox para centrar contenido
+    justify-content: center; // Centrar horizontalmente
+    align-items: center; // Centrar verticalmente
+    height: 100%; // Hacer la tarjeta más alta
+
+    ion-datetime {
+      --background: #e0f7fa; // Fondo del datetime
+      --color: #00796b; // Color del texto
+      --placeholder-color: #004d40; // Color del placeholder
+      border-radius: 8px; // Bordes redondeados para el datetime
+      padding: 10px;
+      font-size: 1.2em; // Tamaño de fuente
+    }
+  }
+
+  // Estilos para el botón
+  ion-button {
+    background-color: #5c6bc0; // Color de fondo del botón
+    border-radius: 5px; // Bordes redondeados
+    color: white; // Color del texto del botón
+    padding: 10px 15px; // Espaciado interno
+
+    ion-icon {
+      color: white; // Color del icono dentro del botón
+    }
+
+    &:hover {
+      background-color: #3949ab; // Color de fondo del botón al pasar el mouse
+    }
+  }
+}

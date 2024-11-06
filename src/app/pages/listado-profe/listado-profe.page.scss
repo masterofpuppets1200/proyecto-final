@@ -1,0 +1,106 @@
+// Variables de color para tema
+$primary-color: #3b82f6;
+$secondary-color: #1e3a8a;
+$tertiary-color: #067a44;
+$text-color: #ffffff;
+$background-color: #f0f4f8;
+
+// Estilo para el ion-menu
+ion-menu {
+  background-color: $background-color;
+
+  ion-toolbar {
+    background-color: $secondary-color;
+    color: $text-color;
+
+    ion-title {
+      font-weight: bold;
+    }
+  }
+
+  ion-content {
+    padding: 20px;
+
+    .icon-title-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: $primary-color;
+      margin-bottom: 10px;
+
+      ion-icon {
+        color: $tertiary-color;
+      }
+
+      ion-card-title {
+        font-size: 1.2rem;
+        color: $secondary-color;
+      }
+    }
+
+    ion-button {
+      width: 100%;
+      font-weight: bold;
+      color: $text-color;
+      background-color: $primary-color;
+      border-radius: 8px;
+      margin-top: 10px;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+
+      ion-icon {
+        margin-right: 5px;
+        color: $text-color;
+      }
+    }
+  }
+}
+
+// Estilo para el contenedor principal
+#main-content {
+  background-color: $background-color;
+  color: $text-color;
+
+  ion-toolbar {
+    background-color: $secondary-color;
+    color: $text-color;
+  }
+
+  ion-card {
+    background-color: $primary-color;
+    color: $text-color;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 10px;
+
+    ion-card-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  }
+
+  .container {
+    padding: 20px;
+
+    ion-card {
+      background-color: $tertiary-color;
+      color: $secondary-color;
+      border-radius: 8px;
+      padding: 10px;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .content-image {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 20px auto;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  }
+}

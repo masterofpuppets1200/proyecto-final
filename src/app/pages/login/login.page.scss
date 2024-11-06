@@ -1,0 +1,72 @@
+// Variables de color
+$primary-color: #3b82f6;
+$secondary-color: #1e3a8a;
+$text-color: #ffffff;
+$background-color: #f0f4f8;
+
+// Estilo general
+ion-content {
+  background-color: $background-color;
+  padding: 20px; // Espaciado alrededor del contenido
+  position: relative; // Para posicionar la imagen de fondo
+
+  .background-image {
+    background-image: url("../../../assets/img/puente-alto.png"); // Ruta de la imagen
+    background-size: cover; // Ajustar la imagen al contenedor
+    background-position: center; // Centrar la imagen
+    position: absolute; // Posición absoluta
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; // Colocar detrás del contenido
+    opacity: 0.5; // Ajustar la opacidad para no interferir con el texto
+  }
+
+  .container {
+    display: flex;
+    justify-content: center; // Centrar el contenido
+    align-items: center;
+    flex-direction: column; // Organizar en columna
+    height: 100%; // Altura completa del contenedor
+  }
+
+  ion-card {
+    width: 100%; // Ancho completo del card
+    max-width: 400px; // Ancho máximo
+    margin: 20px 0; // Margen superior e inferior
+    border-radius: 8px; // Bordes redondeados
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Sombra sutil
+
+    ion-card-content {
+      padding: 20px; // Espaciado interno
+    }
+
+    ion-item {
+      margin-bottom: 15px; // Espaciado entre items
+    }
+
+    ion-button {
+      width: 100%; // Botón de ancho completo
+      margin-top: 10px; // Espaciado superior
+      background-color: $primary-color;
+      color: $text-color;
+
+      &:hover {
+        background-color: darken($primary-color, 10%); // Oscurecer en hover
+      }
+    }
+  }
+
+  a {
+    color: $primary-color; // Color del enlace
+    text-align: center; // Centrar texto
+    display: block; // Hacer que el enlace ocupe todo el ancho
+    margin-top: 10px; // Margen superior
+    text-decoration: underline; // Subrayar el enlace
+
+    &:hover {
+      text-decoration: none; // Quitar subrayado en hover
+    }
+  }
+}

@@ -1,0 +1,51 @@
+ion-card {
+    margin: 16px;
+    padding: 16px;
+    background-color: #f9f9f9; // Color de fondo ligero
+    border-radius: 8px; // Bordes redondeados
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Sombra para profundidad
+  
+    .search-bar {
+      margin-bottom: 16px; // Espacio inferior para separar del contenido
+    }
+  }
+  
+  ion-list {
+    padding: 0; // Eliminar padding por defecto
+  }
+  
+  .table {
+    display: table;
+    width: 100%; // Ancho completo
+  
+    .row {
+      display: table-row; // Mostrar como filas
+  
+      &.header {
+        font-weight: bold;
+        background-color: #e0e0e0; // Color de fondo para el encabezado
+      }
+    }
+  
+    .cell {
+      display: table-cell; // Mostrar como celdas
+      padding: 12px; // Espaciado dentro de las celdas
+      border-bottom: 1px solid #ccc; // Línea separadora
+      text-align: left; // Alinear texto a la izquierda
+  
+      h2 {
+        margin: 0; // Eliminar margen por defecto
+        font-size: 16px; // Tamaño de fuente
+        color: #333; // Color de texto
+      }
+    }
+  }
+  .titulo{
+    text-align: center;
+  }
+  
+  // Ajustes para los items de alumnos y secciones
+  ion-item {
+    margin: 0; // Sin margen adicional
+  }
+  

@@ -1,0 +1,64 @@
+ion-card {
+  margin: 16px;
+  padding: 16px;
+  background-color: #ffffff; // Fondo blanco para el card
+  border-radius: 12px; // Bordes redondeados
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); // Sombra más marcada
+
+  ion-card-header {
+    background-color: #ffffff; // Color verde para el encabezado
+    color: #ffffff; // Texto blanco
+    padding: 16px;
+    border-radius: 12px 12px 0 0; // Bordes redondeados en la parte superior
+    font-size: 1.5em; // Tamaño de fuente mayor
+
+    ion-title {
+      text-align: center; // Centrar el título
+    }
+  }
+
+  ion-list {
+    padding: 0; // Eliminar padding por defecto
+
+    ion-item {
+      margin: 10px 0; // Espaciado entre items
+      background-color: #f1f1f1; // Fondo suave
+      border-radius: 8px; // Bordes redondeados
+      transition: background-color 0.3s, transform 0.2s; // Transición suave
+
+      &:hover {
+        background-color: #e0e0e0; // Color más oscuro al pasar el mouse
+        transform: scale(1.02); // Efecto de aumento al pasar el mouse
+      }
+
+      ion-label {
+        display: flex;
+        align-items: center; // Centrar verticalmente
+
+        .icon-title-container {
+          display: flex;
+          align-items: center; // Centrar icono y botón
+          width: 100%; // Ancho completo
+
+          ion-icon {
+            margin-right: 12px; // Espaciado entre icono y botón
+            color: #4caf50; // Color verde para el icono
+            font-size: 24px; // Tamaño del icono
+          }
+
+          ion-button {
+            background-color: #ffffff; // Botón verde
+            color: #ffffff; // Texto blanco
+            border-radius: 8px; // Bordes del botón
+            padding: 8px 16px; // Padding del botón
+            transition: background-color 0.3s; // Transición suave
+
+            &:hover {
+              background-color: #132e14; // Color más oscuro al pasar el mouse
+            }
+          }
+        }
+      }
+    }
+  }
+}

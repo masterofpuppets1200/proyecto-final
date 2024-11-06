@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="success">
+    <ion-title class="titulo">Lista Clases</ion-title>
+    <ion-button color="success" slot="end" [routerLink]="['/listado-profe']">
+      <ion-icon name="log-in-sharp" size="large"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <div class="search-bar">
+      <ion-searchbar (ionInput)="filtrarPorAsignatura($event)" placeholder="Buscar asignatura o sección" debounce="300"></ion-searchbar>
+    </div>
+
+    <div class="table">
+      <div class="row header">
+        <div class="cell">Asignatura</div>
+        <div class="cell">Seccion</div>
+        <div class="cell">Alumno</div>
+      </div>
+
+      <div *ngFor="let asignatura of filtradaAsignaturas" class="row">
+        <div class="cell">{{ asignatura.id }}</div>
+        <div class="cell">
+          <div *ngIf="asignatura.seccionesFiltradas && asignatura.seccionesFiltradas.length > 0">
+            <div *ngFor="let seccion of asignatura.seccionesFiltradas">
+              <h2>Sección: {{ seccion.id }}</h2>
+            </div>
+          </div>
+        </div>
+        <div class="cell">
+          <div *ngIf="AlumnosPorSeccion && AlumnosPorSeccion[asignatura.id]">
+            <div *ngFor="let seccion of asignatura.seccionesFiltradas">
+              <div *ngFor="let alumno of AlumnosPorSeccion[asignatura.id][seccion.id]">
+                <h2>Alumno: {{ alumno.id }}</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-card>
+</ion-content>

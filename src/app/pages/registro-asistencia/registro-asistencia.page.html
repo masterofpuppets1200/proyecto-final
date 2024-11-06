@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title class="titulo">Registro de Asistencia</ion-title>
+  </ion-toolbar>
+</ion-header>
+<br>
+<br>
+<ion-content>
+  <!-- Botón para iniciar el escaneo de QR -->
+  <ion-button expand="full" (click)="escanearQr()">Escanear QR para Asistencia</ion-button>
+
+  <!-- Contenedor para el escaneo de QR en navegador -->
+  <div *ngIf="!isSupported" id="reader" style="width: 100%; height: 400px; margin: 20px auto; border: 1px solid #ccc;">
+    <p style="text-align: center; padding: 20px;">Escáner QR activado en navegador</p>
+  </div>
+
+  <!-- Muestra las coordenadas y distancia si están disponibles -->
+  <ion-card *ngIf="latitudEstudiante && longitudEstudiante && distanciaEnMetros">
+    <ion-card-header>
+      <ion-card-title>Información de Ubicación</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Coordenadas del Estudiante:</strong></p>
+      <p>Latitud: {{ latitudEstudiante }}</p>
+      <p>Longitud: {{ longitudEstudiante }}</p>
+
+      <p><strong>Coordenadas del Profesor:</strong></p>
+      <p>Latitud: {{ latitudProfesorNum }}</p>
+      <p>Longitud: {{ longitudProfesorNum }}</p>
+
+      <p><strong>Distancia entre el Estudiante y el Profesor:</strong></p>
+      <p>{{ distanciaEnMetros | number: '1.0-2' }} metros</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+ 
+
+
+
